@@ -3,94 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlightDeals - Amazing Flight Deals</title>
+    <title>InsiderFlying - Find the Best Flight Deals</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar glass">
-        <div class="container">
-            <div class="logo">FlightDeals</div>
-            <div class="nav-links">
-                <a href="#features">How It Works</a>
-                <a href="#testimonials">Success Stories</a>
-                <a href="#pricing">Pricing</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <i class="fas fa-plane"></i>
+                InsiderFlying
+            </a>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active"><i class="fas fa-plane"></i> Flights</a>
+                <a href="#" class="nav-link"><i class="fas fa-hotel"></i> Hotels</a>
+                <a href="#" class="nav-link"><i class="fas fa-car"></i> Cars</a>
+                <a href="#" class="nav-link"><i class="fas fa-suitcase"></i> Packages</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-text"><i class="fas fa-bell"></i> Alerts</button>
+                <button class="btn-text"><i class="fas fa-heart"></i> Trips</button>
+                <button class="btn-primary-sm">Sign In</button>
             </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Never Overpay<br>For Flights Again</h1>
-            <p class="hero-text">Get instant alerts for exclusive flight deals that save you up to 60% on your next adventure.</p>
-            <div class="cta-group">
-                <form class="signup-form glass">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn-primary">Get Flight Alerts</button>
-                </form>
-                <div class="trust-badges">
-                    <span><i class="fas fa-check-circle"></i> Free Forever</span>
-                    <span><i class="fas fa-check-circle"></i> Instant Alerts</span>
-                    <span><i class="fas fa-check-circle"></i> Cancel Anytime</span>
-                </div>
+    <!-- Hero Search Section -->
+    <section class="hero-search">
+        <div class="hero-content">
+            <h1>Find Your Next Flight Deal</h1>
+            <p>Compare prices from hundreds of airlines and travel sites</p>
+        </div>
+
+        <!-- Search Form -->
+        <div class="search-container">
+            <div class="search-tabs">
+                <button class="search-tab active">Round Trip</button>
+                <button class="search-tab">One Way</button>
+                <button class="search-tab">Multi-City</button>
             </div>
+
+            <form class="search-form">
+                <div class="search-row">
+                    <div class="search-field location-field">
+                        <label>From</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-plane-departure"></i>
+                            <input type="text" placeholder="City or airport" value="New York (JFK)">
+                        </div>
+                    </div>
+
+                    <button type="button" class="swap-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+
+                    <div class="search-field location-field">
+                        <label>To</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-plane-arrival"></i>
+                            <input type="text" placeholder="City or airport" value="Los Angeles (LAX)">
+                        </div>
+                    </div>
+
+                    <div class="search-field date-field">
+                        <label>Depart</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-calendar"></i>
+                            <input type="text" placeholder="Add date" value="Jan 15, 2025">
+                        </div>
+                    </div>
+
+                    <div class="search-field date-field">
+                        <label>Return</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-calendar"></i>
+                            <input type="text" placeholder="Add date" value="Jan 22, 2025">
+                        </div>
+                    </div>
+
+                    <div class="search-field travelers-field">
+                        <label>Travelers & Class</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="1 adult, Economy" value="1 adult, Economy" readonly>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="feature-grid">
-                <div class="feature-card glass">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Choose Your Routes</h3>
-                    <p>Tell us where you want to fly, and we'll monitor prices 24/7</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-header">
+                    <h3>Filters</h3>
+                    <button class="reset-btn">Reset all</button>
                 </div>
-                <div class="feature-card glass">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Get Instant Alerts</h3>
-                    <p>Receive notifications the moment prices drop on your routes</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-ticket"></i>
-                    </div>
-                    <h3>Book & Save</h3>
-                    <p>Book directly with airlines when you spot the perfect deal</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Success Stories</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card glass">
-                    <div class="testimonial-content">
-                        <p>"Found business class tickets to Tokyo at economy prices. Saved over $2,000 on my dream trip!"</p>
-                        <div class="savings-badge">Saved $2,000+</div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Sarah M.</h4>
-                                <p>Travel Enthusiast</p>
+                <!-- Stops Filter -->
+                <div class="filter-section">
+                    <h4>Stops</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="option-label">Nonstop</span>
+                            <span class="option-price">from $149</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="option-label">1 stop</span>
+                            <span class="option-price">from $129</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="option-label">2+ stops</span>
+                            <span class="option-price">from $99</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <h4>Price</h4>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <span>to</span>
+                            <input type="number" placeholder="Max" value="500">
+                        </div>
+                        <input type="range" min="0" max="1000" value="500" class="price-slider">
+                    </div>
+                </div>
+
+                <!-- Times Filter -->
+                <div class="filter-section">
+                    <h4>Departure Time</h4>
+                    <div class="time-options">
+                        <button class="time-btn">
+                            <i class="fas fa-sun"></i>
+                            <span>Morning</span>
+                            <small>5am - 12pm</small>
+                        </button>
+                        <button class="time-btn active">
+                            <i class="fas fa-cloud-sun"></i>
+                            <span>Afternoon</span>
+                            <small>12pm - 6pm</small>
+                        </button>
+                        <button class="time-btn">
+                            <i class="fas fa-moon"></i>
+                            <span>Evening</span>
+                            <small>6pm - 12am</small>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Airlines Filter -->
+                <div class="filter-section">
+                    <h4>Airlines</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="option-label">Delta</span>
+                            <span class="option-price">from $159</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="option-label">United Airlines</span>
+                            <span class="option-price">from $149</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="option-label">American Airlines</span>
+                            <span class="option-price">from $155</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="option-label">JetBlue</span>
+                            <span class="option-price">from $139</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="option-label">Southwest</span>
+                            <span class="option-price">from $129</span>
+                        </label>
+                    </div>
+                    <button class="show-more-btn">Show more airlines</button>
+                </div>
+
+                <!-- Duration Filter -->
+                <div class="filter-section">
+                    <h4>Flight Duration</h4>
+                    <div class="duration-range">
+                        <span class="duration-label">Under 10 hours</span>
+                        <input type="range" min="2" max="24" value="10" class="duration-slider">
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <!-- Results Header -->
+                <div class="results-header">
+                    <div class="results-info">
+                        <span class="results-count">247 flights found</span>
+                        <span class="results-route">New York to Los Angeles</span>
+                    </div>
+                    <div class="results-sort">
+                        <label>Sort by:</label>
+                        <select>
+                            <option value="best">Best</option>
+                            <option value="price">Cheapest</option>
+                            <option value="duration">Fastest</option>
+                            <option value="departure">Departure time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Quick Filters -->
+                <div class="quick-filters">
+                    <button class="quick-filter active">
+                        <span class="filter-name">Best</span>
+                        <span class="filter-price">$149</span>
+                        <span class="filter-duration">5h 30m</span>
+                    </button>
+                    <button class="quick-filter">
+                        <span class="filter-name">Cheapest</span>
+                        <span class="filter-price">$99</span>
+                        <span class="filter-duration">8h 45m</span>
+                    </button>
+                    <button class="quick-filter">
+                        <span class="filter-name">Fastest</span>
+                        <span class="filter-price">$189</span>
+                        <span class="filter-duration">5h 10m</span>
+                    </button>
+                </div>
+
+                <!-- Featured Deal Banner -->
+                <div class="deal-banner">
+                    <div class="deal-badge">
+                        <i class="fas fa-fire"></i>
+                        Hot Deal
+                    </div>
+                    <div class="deal-content">
+                        <span class="deal-text">Save up to 40% on flights this week!</span>
+                        <span class="deal-cta">Limited seats available</span>
+                    </div>
+                </div>
+
+                <!-- Flight Results -->
+                <div class="flight-results">
+                    <!-- Flight Card 1 - Best Deal -->
+                    <div class="flight-card featured">
+                        <div class="card-badge">Best Value</div>
+                        <div class="flight-main">
+                            <div class="flight-segment">
+                                <div class="airline-info">
+                                    <div class="airline-logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">Delta</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">6:00 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 30m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">9:30 AM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight-segment return">
+                                <div class="airline-info">
+                                    <div class="airline-logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">Delta</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">2:00 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 15m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">10:15 PM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-price">
+                            <div class="price-info">
+                                <span class="price">$149</span>
+                                <span class="price-type">per person</span>
+                            </div>
+                            <button class="select-btn">Select</button>
+                            <div class="price-details">
+                                <i class="fas fa-info-circle"></i>
+                                <span>$298 total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight Card 2 -->
+                    <div class="flight-card">
+                        <div class="flight-main">
+                            <div class="flight-segment">
+                                <div class="airline-info">
+                                    <div class="airline-logo united">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">United</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">8:15 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 45m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">12:00 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight-segment return">
+                                <div class="airline-info">
+                                    <div class="airline-logo united">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">United</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">5:30 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 20m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">1:50 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-price">
+                            <div class="price-info">
+                                <span class="price">$169</span>
+                                <span class="price-type">per person</span>
+                            </div>
+                            <button class="select-btn">Select</button>
+                            <div class="price-details">
+                                <i class="fas fa-info-circle"></i>
+                                <span>$338 total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight Card 3 - With Stop -->
+                    <div class="flight-card">
+                        <div class="card-badge cheapest">Cheapest</div>
+                        <div class="flight-main">
+                            <div class="flight-segment">
+                                <div class="airline-info">
+                                    <div class="airline-logo southwest">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">Southwest</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">10:00 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">8h 45m</span>
+                                        <div class="duration-line has-stop">
+                                            <span class="line"></span>
+                                            <span class="stop-marker"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops has-stop">1 stop (DEN)</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">4:45 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight-segment return">
+                                <div class="airline-info">
+                                    <div class="airline-logo southwest">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">Southwest</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">7:00 AM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">7h 30m</span>
+                                        <div class="duration-line has-stop">
+                                            <span class="line"></span>
+                                            <span class="stop-marker"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops has-stop">1 stop (PHX)</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">5:30 PM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-price">
+                            <div class="price-info">
+                                <span class="price">$99</span>
+                                <span class="price-type">per person</span>
+                            </div>
+                            <button class="select-btn">Select</button>
+                            <div class="price-details">
+                                <i class="fas fa-info-circle"></i>
+                                <span>$198 total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight Card 4 -->
+                    <div class="flight-card">
+                        <div class="flight-main">
+                            <div class="flight-segment">
+                                <div class="airline-info">
+                                    <div class="airline-logo jetblue">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">JetBlue</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">12:30 PM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">6h 00m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">4:30 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight-segment return">
+                                <div class="airline-info">
+                                    <div class="airline-logo jetblue">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">JetBlue</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">9:00 PM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 25m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">5:25 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-price">
+                            <div class="price-info">
+                                <span class="price">$139</span>
+                                <span class="price-type">per person</span>
+                            </div>
+                            <button class="select-btn">Select</button>
+                            <div class="price-details">
+                                <i class="fas fa-info-circle"></i>
+                                <span>$278 total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight Card 5 - Fastest -->
+                    <div class="flight-card">
+                        <div class="card-badge fastest">Fastest</div>
+                        <div class="flight-main">
+                            <div class="flight-segment">
+                                <div class="airline-info">
+                                    <div class="airline-logo american">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">American</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">7:00 AM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 10m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">10:10 AM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight-segment return">
+                                <div class="airline-info">
+                                    <div class="airline-logo american">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <span class="airline-name">American</span>
+                                </div>
+                                <div class="flight-times">
+                                    <div class="time-block">
+                                        <span class="time">11:00 AM</span>
+                                        <span class="airport">LAX</span>
+                                    </div>
+                                    <div class="flight-duration">
+                                        <span class="duration">5h 05m</span>
+                                        <div class="duration-line">
+                                            <span class="line"></span>
+                                            <i class="fas fa-plane"></i>
+                                        </div>
+                                        <span class="stops">Nonstop</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <span class="time">7:05 PM</span>
+                                        <span class="airport">JFK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flight-price">
+                            <div class="price-info">
+                                <span class="price">$189</span>
+                                <span class="price-type">per person</span>
+                            </div>
+                            <button class="select-btn">Select</button>
+                            <div class="price-details">
+                                <i class="fas fa-info-circle"></i>
+                                <span>$378 total</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card glass">
-                    <div class="testimonial-content">
-                        <p>"Got alerts for my family vacation and found tickets to Europe at 70% off. This service pays for itself!"</p>
-                        <div class="savings-badge">Saved $1,800+</div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>James K.</h4>
-                                <p>Family Traveler</p>
-                            </div>
+
+                <!-- Load More -->
+                <div class="load-more">
+                    <button class="load-more-btn">
+                        Show more flights
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <span class="showing-count">Showing 5 of 247 flights</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Price Alert Banner -->
+    <section class="alert-banner">
+        <div class="alert-container">
+            <div class="alert-icon">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="alert-content">
+                <h3>Track prices for this trip</h3>
+                <p>Get notified when prices drop for New York to Los Angeles</p>
+            </div>
+            <div class="alert-form">
+                <input type="email" placeholder="Enter your email">
+                <button class="alert-btn">Create Alert</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Deals Section -->
+    <section class="popular-deals">
+        <div class="deals-container">
+            <div class="deals-header">
+                <h2>Popular Flight Deals</h2>
+                <a href="#" class="see-all">See all deals <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="deal-tag">-45%</span>
+                        <div class="deal-destination">Paris</div>
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-route">
+                            <span>New York</span>
+                            <i class="fas fa-plane"></i>
+                            <span>Paris</span>
+                        </div>
+                        <div class="deal-dates">Jan 20 - Jan 27</div>
+                        <div class="deal-pricing">
+                            <span class="deal-old-price">$650</span>
+                            <span class="deal-new-price">$359</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="deal-tag">-35%</span>
+                        <div class="deal-destination">Tokyo</div>
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-route">
+                            <span>Los Angeles</span>
+                            <i class="fas fa-plane"></i>
+                            <span>Tokyo</span>
+                        </div>
+                        <div class="deal-dates">Feb 5 - Feb 15</div>
+                        <div class="deal-pricing">
+                            <span class="deal-old-price">$1,200</span>
+                            <span class="deal-new-price">$779</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="deal-tag">-50%</span>
+                        <div class="deal-destination">Cancun</div>
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-route">
+                            <span>Chicago</span>
+                            <i class="fas fa-plane"></i>
+                            <span>Cancun</span>
+                        </div>
+                        <div class="deal-dates">Mar 1 - Mar 8</div>
+                        <div class="deal-pricing">
+                            <span class="deal-old-price">$480</span>
+                            <span class="deal-new-price">$239</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span class="deal-tag">-40%</span>
+                        <div class="deal-destination">London</div>
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-route">
+                            <span>Miami</span>
+                            <i class="fas fa-plane"></i>
+                            <span>London</span>
+                        </div>
+                        <div class="deal-dates">Feb 14 - Feb 21</div>
+                        <div class="deal-pricing">
+                            <span class="deal-old-price">$890</span>
+                            <span class="deal-new-price">$529</span>
                         </div>
                     </div>
                 </div>
@@ -98,53 +736,50 @@
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Start Saving Today</h2>
-            <div class="pricing-card glass">
-                <div class="pricing-header">
-                    <h3>Lifetime Free</h3>
-                    <div class="price">$0</div>
-                    <p>No credit card required</p>
-                </div>
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check"></i> Unlimited Route Monitoring</li>
-                    <li><i class="fas fa-check"></i> Real-time Price Alerts</li>
-                    <li><i class="fas fa-check"></i> Price History Tracking</li>
-                    <li><i class="fas fa-check"></i> Email & Mobile Notifications</li>
-                </ul>
-                <form class="signup-form glass">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn-primary">Get Started Free</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <div class="logo">FlightDeals</div>
-                    <p>Never miss amazing flight deals again.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="#features">How It Works</a>
-                    <a href="#testimonials">Success Stories</a>
-                    <a href="#pricing">Pricing</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
+                    <a href="/" class="footer-logo">
+                        <i class="fas fa-plane"></i>
+                        InsiderFlying
+                    </a>
+                    <p>Find the best flight deals and save money on your next trip.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Feedback</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 FlightDeals. All rights reserved.</p>
+                <p>&copy; 2025 InsiderFlying. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-lock"></i> Secure Booking</span>
+                    <span><i class="fas fa-shield-alt"></i> Best Price Guarantee</span>
+                </div>
             </div>
         </div>
     </footer>
